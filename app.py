@@ -53,6 +53,8 @@ st.title("Date → Day of Week")
 date_input = st.date_input(
     "Pick a date",
     value=datetime.today(),
+    min_value=date(1000, 1, 1),   # earliest selectable date
+    max_value=date(3000, 12, 31), # latest selectable date
     help="Select a date to see which day of the week it is.",
 )
 
